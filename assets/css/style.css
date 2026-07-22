@@ -511,10 +511,6 @@ footer {
   z-index: 1;
 }
 
-/* 首頁影片只是展示，不攔截滑鼠點擊 */
-.hero-right video {
-  pointer-events: none;
-}
 
 /* 背景光暈或偽元素不可擋住按鈕 */
 .hero::before,
