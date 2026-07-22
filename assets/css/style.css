@@ -453,3 +453,42 @@ footer {
 
 }
 
+/* =======================================
+   Fix Hero Button Click Area
+======================================= */
+
+.hero-content {
+  position: relative;
+}
+
+.hero-left {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-buttons {
+  position: relative;
+  z-index: 20;
+}
+
+.hero-buttons a {
+  position: relative;
+  z-index: 30;
+  pointer-events: auto;
+}
+
+.hero-right {
+  position: relative;
+  z-index: 1;
+}
+
+/* 首頁影片只是展示，不攔截滑鼠點擊 */
+.hero-right video {
+  pointer-events: none;
+}
+
+/* 背景光暈或偽元素不可擋住按鈕 */
+.hero::before,
+.hero::after {
+  pointer-events: none;
+}
