@@ -414,3 +414,42 @@ footer {
     grid-column: auto;
   }
 }
+
+/* =======================================
+   Guide Page
+======================================= */
+
+.guide-container{
+
+    max-width:700px;
+
+    text-align:center;
+
+    padding:120px 20px;
+
+}
+
+.guide-text{
+
+    color:#b8c4d3;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin:30px 0;
+
+}
+
+.line-id{
+
+    margin-top:30px;
+
+    color:#59f2c8;
+
+    font-weight:600;
+
+    font-size:18px;
+
+}
+
