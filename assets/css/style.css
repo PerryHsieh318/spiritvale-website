@@ -443,6 +443,61 @@ footer {
   .card {
     min-height: auto;
   }
+
+    .navbar-content {
+    position: relative;
+    min-height: 72px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .main-navigation {
+    position: absolute;
+    z-index: 1000;
+    top: calc(100% + 1px);
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px;
+    background: rgba(5, 10, 17, 0.98);
+    border: 1px solid rgba(84, 240, 178, 0.16);
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.38);
+  }
+
+  .main-navigation.is-open {
+    display: flex;
+  }
+
+  .main-navigation a {
+    width: 100%;
+    padding: 14px 16px;
+    color: #c3d2dd;
+    border-radius: 8px;
+  }
+
+  .main-navigation a:hover {
+    color: #54f0b2;
+    background: rgba(84, 240, 178, 0.07);
+  }
+
+  .menu-toggle.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
 }
 /* =======================================
    Guide Page
@@ -1474,5 +1529,118 @@ footer {
 
   .contact-support-list li {
     padding-right: 15px;
+  }
+}
+
+/* =========================
+   Hamburger Menu
+========================= */
+
+.navbar-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-toggle {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 46px;
+  height: 42px;
+
+  background: red !important;
+}
+
+.menu-toggle span{
+    display:block;
+    width:24px;
+    height:3px;
+    margin:4px 0;
+    background:#54f0b2 !important;
+}
+@media (max-width: 760px) {
+
+  .navbar-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .brand {
+    flex-shrink: 0;
+  }
+
+  .menu-toggle {
+    position: relative;
+    z-index: 2001;
+    display: block !important;
+    flex-shrink: 0;
+  }
+
+  .main-navigation {
+    position: absolute;
+    z-index: 2000;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px;
+    background: rgba(5, 10, 17, 0.98);
+    border: 1px solid rgba(84, 240, 178, 0.18);
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  }
+
+  .main-navigation.is-open {
+    display: flex !important;
+  }
+
+  .main-navigation a {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    color: #c5d3dd;
+    border-radius: 8px;
+  }
+
+  .main-navigation a:hover {
+    color: #54f0b2;
+    background: rgba(84, 240, 178, 0.08);
+  }
+
+  .menu-toggle.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .menu-toggle {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 99999 !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 10px 16px !important;
+    color: #54f0b2 !important;
+    background: #07111f !important;
+    border: 2px solid #54f0b2 !important;
   }
 }
