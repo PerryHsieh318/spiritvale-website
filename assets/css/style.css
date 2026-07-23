@@ -1028,3 +1028,247 @@ footer {
     flex-direction: column;
   }
 }
+
+
+/* =========================
+   Update / Patch Notes Page
+========================= */
+
+.update-page {
+  min-height: 100vh;
+  background: #050a11;
+}
+
+.update-hero {
+  padding: 110px 0 78px;
+  background:
+    radial-gradient(
+      circle at 76% 25%,
+      rgba(84, 240, 178, 0.14),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #07111f, #071b19);
+  border-bottom: 1px solid rgba(84, 240, 178, 0.14);
+}
+
+.update-hero-content {
+  max-width: 860px;
+}
+
+.update-hero h1 {
+  margin: 14px 0 24px;
+  font-size: clamp(48px, 7vw, 78px);
+  line-height: 1.08;
+}
+
+.update-hero-description {
+  max-width: 720px;
+  margin: 0;
+  color: #a8bbcc;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.update-list {
+  padding-top: 72px;
+}
+
+.update-container {
+  max-width: 980px;
+}
+
+.patch-card {
+  overflow: hidden;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13, 27, 40, 0.98),
+      rgba(6, 14, 24, 0.98)
+    );
+  border: 1px solid rgba(84, 240, 178, 0.17);
+  border-radius: 22px;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.34),
+    0 0 50px rgba(84, 240, 178, 0.04);
+}
+
+.patch-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 38px 40px;
+  background:
+    radial-gradient(
+      circle at 90% 0,
+      rgba(84, 240, 178, 0.15),
+      transparent 42%
+    ),
+    rgba(8, 22, 31, 0.9);
+  border-bottom: 1px solid rgba(84, 240, 178, 0.16);
+}
+
+.patch-label {
+  margin: 0 0 8px;
+  color: #54f0b2;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.patch-header h2 {
+  margin: 0 0 12px;
+  font-size: clamp(30px, 5vw, 46px);
+}
+
+.patch-header time {
+  color: #8fa5b7;
+  font-size: 15px;
+}
+
+.latest-badge {
+  padding: 8px 13px;
+  color: #05110c;
+  background: #54f0b2;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  box-shadow: 0 0 26px rgba(84, 240, 178, 0.22);
+}
+
+.patch-section {
+  padding: 34px 40px;
+  border-bottom: 1px solid rgba(84, 240, 178, 0.09);
+}
+
+.patch-section:last-of-type {
+  border-bottom: none;
+}
+
+.patch-section h3 {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 23px;
+}
+
+.patch-section p {
+  margin: 0 0 18px;
+  color: #a5b7c8;
+  line-height: 1.85;
+}
+
+.patch-section strong {
+  color: #d8fff0;
+}
+
+.patch-section ul {
+  display: grid;
+  gap: 11px;
+  margin: 0;
+  padding-left: 22px;
+  color: #b1c2d1;
+}
+
+.patch-section li {
+  padding-left: 5px;
+  line-height: 1.75;
+}
+
+.patch-section li::marker {
+  color: #54f0b2;
+}
+
+.patch-summary {
+  background: rgba(84, 240, 178, 0.045);
+}
+
+.patch-summary ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 30px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.patch-summary li {
+  position: relative;
+  padding: 14px 16px 14px 42px;
+  background: rgba(4, 13, 20, 0.55);
+  border: 1px solid rgba(84, 240, 178, 0.12);
+  border-radius: 10px;
+}
+
+.patch-summary li::before {
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  color: #54f0b2;
+  content: "✓";
+  font-weight: 900;
+}
+
+.patch-notice {
+  margin: 22px 0;
+  padding: 18px 20px;
+  color: #c9ffe9;
+  background: rgba(84, 240, 178, 0.07);
+  border: 1px solid rgba(84, 240, 178, 0.22);
+  border-left: 4px solid #54f0b2;
+  border-radius: 11px;
+  line-height: 1.8;
+}
+
+.patch-footer {
+  padding: 38px 40px;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(84, 240, 178, 0.13),
+      transparent 38%
+    ),
+    #08141e;
+}
+
+.patch-footer h3 {
+  margin: 0 0 12px;
+  font-size: 25px;
+}
+
+.patch-footer p {
+  max-width: 680px;
+  margin: 0 0 24px;
+  color: #a7b9c9;
+  line-height: 1.8;
+}
+
+@media (max-width: 760px) {
+
+  .update-hero {
+    padding: 72px 0 54px;
+  }
+
+  .update-hero h1 {
+    font-size: 43px;
+  }
+
+  .update-list {
+    padding-top: 42px;
+  }
+
+  .patch-header {
+    flex-direction: column;
+    padding: 27px 21px;
+  }
+
+  .patch-section {
+    padding: 27px 21px;
+  }
+
+  .patch-summary ul {
+    grid-template-columns: 1fr;
+  }
+
+  .patch-footer {
+    padding: 30px 21px;
+  }
+}
