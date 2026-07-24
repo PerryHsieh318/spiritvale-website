@@ -1544,24 +1544,26 @@ footer {
 }
 
 .menu-toggle {
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+  display: none;
   width: 46px;
   height: 42px;
-
-  background: red !important;
+  padding: 10px;
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid rgba(84, 240, 178, 0.3);
+  border-radius: 9px;
+  cursor: pointer;
 }
 
-.menu-toggle span{
-    display:block;
-    width:24px;
-    height:3px;
-    margin:4px 0;
-    background:#54f0b2 !important;
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 3px auto;
+  background: #54f0b2;
+  border-radius: 999px;
 }
+
 @media (max-width: 760px) {
 
   .navbar-content {
