@@ -125,6 +125,8 @@
 
     <div class="container update-container">
 
+
+      <!-- 2026.07.25 更新 -->
       <article class="patch-card">
 
         <!-- 版本標題 -->
@@ -133,14 +135,159 @@
           <div>
             <p class="patch-label">LATEST UPDATE</p>
 
+            <h2>Version 2026.07.25</h2>
+
+            <time datetime="2026-07-25">
+              2026 / 07 / 25
+            </time>
+          </div>
+
+          <span class="latest-badge">LATEST</span>
+
+        </header>
+
+
+        <!-- 更新重點 -->
+        <section class="patch-section patch-summary">
+
+          <h3>✨ 本次更新重點</h3>
+
+          <ul>
+            <li>修正聖騎士技能啟動問題</li>
+            <li>優化召喚物重新召喚邏輯</li>
+            <li>全面強化背包自動管理</li>
+            <li>新增裝備與神器分解選項</li>
+            <li>新增自動組隊邀請功能</li>
+            <li>新增隊伍頻道鎖定功能</li>
+          </ul>
+
+        </section>
+
+
+        <!-- 戰鬥與技能 -->
+        <section class="patch-section">
+
+          <h3>⚔️ 戰鬥與技能</h3>
+
+          <p>
+            本次改善多項職業技能、召喚物與戰鬥判定邏輯，
+            提升長時間執行時的穩定性。
+          </p>
+
+          <ul>
+            <li>修正聖騎士「獅鷲騎乘」技能無法正常啟動的問題。</li>
+            <li>「守護之契」效果生效期間不再重複施放。</li>
+            <li>優化「召喚復生」的行為與判定邏輯。</li>
+            <li>二轉召喚物消失或被擊敗後會自動重新召喚。</li>
+            <li>召喚物重新召喚不再依賴固定計時器。</li>
+            <li>角色不再因偵測到其他樓層的怪物而停止動作。</li>
+          </ul>
+
+        </section>
+
+
+        <!-- 背包管理 -->
+        <section class="patch-section">
+
+          <h3>🎒 背包管理</h3>
+
+          <p>
+            調整自動出售、存倉與分解功能的執行順序，
+            並新增更細緻的物品保護與分類設定。
+          </p>
+
+          <ul>
+            <li>自動出售現在會優先於自動存倉執行。</li>
+            <li>自動存倉功能每 30 秒執行一次。</li>
+            <li>自動存倉在戰鬥期間同樣會正常運作。</li>
+            <li>所有未裝備的背包物品皆可設定自動存倉。</li>
+            <li>標記為分解的物品會在存倉前優先處理。</li>
+            <li>裝備與神器新增各自獨立的自動分解選項。</li>
+            <li>受保護物品不會被誤出售、誤分解或誤存倉。</li>
+          </ul>
+
+        </section>
+
+
+        <!-- 生物材料 -->
+        <section class="patch-section">
+
+          <h3>🧪 新增生物材料分類</h3>
+
+          <p>
+            「出售／分類」選單新增
+            <strong>生物材料</strong>
+            選項。
+          </p>
+
+          <div class="patch-notice">
+            啟用後，只會出售直接從生物身上取得的普通材料；
+            同一背包分類中的其他重要材料仍會保持受保護狀態。
+          </div>
+
+        </section>
+
+
+        <!-- 隊伍與頻道 -->
+        <section class="patch-section">
+
+          <h3>👥 隊伍與頻道</h3>
+
+          <ul>
+            <li>新增自動發送組隊邀請的選項。</li>
+            <li>啟用後，系統會向目前地圖上的可用玩家自動發送邀請。</li>
+            <li>原有的自動接受組隊邀請功能維持相容。</li>
+            <li>原有的自動退出隊伍功能維持相容。</li>
+            <li>新增為隊伍及多個角色選擇特定頻道的功能。</li>
+            <li>支援鎖定指定頻道，方便多角色集中於相同頻道。</li>
+          </ul>
+
+        </section>
+
+
+        <!-- 更新提醒 -->
+        <footer class="patch-footer">
+
+          <h3>更新提醒</h3>
+
+          <p>
+            建議所有使用者更新至
+            <strong>2026.07.25</strong>
+            版本，以取得最新的戰鬥、背包管理及隊伍功能改善。
+          </p>
+
+          <a
+            href="https://line.me/R/ti/p/@174edovb"
+            class="button primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            聯絡官方 LINE
+          </a>
+
+        </footer>
+
+      </article>
+
+
+
+
+
+
+      <article class="patch-card">
+
+        <!-- 版本標題 -->
+        <header class="patch-header">
+
+          <div>
+            <p class="patch-label">PREVIOUS UPDATE</p>
+
             <h2>Version 2026.07.22.5</h2>
 
             <time datetime="2026-07-22">
               2026 / 07 / 22
             </time>
           </div>
-
-          <span class="latest-badge">LATEST</span>
 
         </header>
 
@@ -303,10 +450,19 @@
 
 </main>
 
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNavigation = document.querySelector(".main-navigation");
 
-<section class="update-list">
+  if (menuToggle && mainNavigation) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNavigation.classList.toggle("is-open");
 
-<div class="container">
+      menuToggle.classList.toggle("is-open", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
+</script>
 
 </body>
 </html>
