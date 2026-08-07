@@ -273,19 +273,66 @@
 
 <div class="hero-buttons">
 
-  <a
-    href="https://svlab.cc/api/payment/create?product=NEW_MONTH"
-    class="button primary"
+<div
+  style="
+    max-width:520px;
+    margin:24px auto;
+  "
+>
+  <label
+    for="customer-ref"
+    style="
+      display:block;
+      margin-bottom:8px;
+      font-weight:700;
+    "
   >
-    🟢 新會員 NT$1600
-  </a>
+    LINE 暱稱 / 聯絡識別名稱
+  </label>
 
-  <a
-    href="https://svlab.cc/api/payment/create?product=RENEW_MONTH"
-    class="button secondary"
+  <input
+    id="customer-ref"
+    type="text"
+    maxlength="50"
+    placeholder="例如：阿明、King123"
+    style="
+      width:100%;
+      padding:14px 16px;
+      border:1px solid #ccc;
+      border-radius:10px;
+      font-size:16px;
+    "
   >
-    🔵 舊會員續約 NT$1490
-  </a>
+
+  <p
+    style="
+      margin-top:8px;
+      font-size:14px;
+      color:#666;
+    "
+  >
+    請填寫與客服聯絡時容易辨識的名稱，
+    方便我們確認您的付款與卡號。
+  </p>
+</div>
+
+
+
+<a
+  href="#"
+  class="button primary"
+  onclick="startPayment('NEW_MONTH'); return false;"
+>
+  🟢 新會員 NT$1600
+</a>
+
+<a
+  href="#"
+  class="button secondary"
+  onclick="startPayment('RENEW_MONTH'); return false;"
+>
+  🔵 舊會員續約 NT$1490
+</a>
 
 </div>
 
@@ -325,6 +372,42 @@
     </section>
 
   </main>
+
+
+<script>
+  function startPayment(productCode) {
+    const input =
+      document.getElementById("customer-ref");
+
+    const customerRef =
+      input.value.trim();
+
+    if (!customerRef) {
+      alert(
+        "請先填寫 LINE 暱稱或聯絡識別名稱"
+      );
+
+      input.focus();
+
+      return;
+    }
+
+    const paymentUrl =
+      "https://svlab.cc/api/payment/create" +
+      "?product=" +
+      encodeURIComponent(productCode) +
+      "&customer_ref=" +
+      encodeURIComponent(customerRef);
+
+    window.location.href =
+      paymentUrl;
+  }
+</script>
+
+
+
+
+
 
 </body>
 </html>
