@@ -2888,3 +2888,73 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+.purchase-section{
+
+    max-width:900px;
+
+    margin:80px auto;
+
+    text-align:center;
+
+}
+
+.purchase-desc{
+
+    color:#666;
+
+    margin-bottom:40px;
+
+}
+
+.purchase-card{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    padding:35px;
+
+    margin:25px 0;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.price{
+
+    font-size:36px;
+
+    font-weight:bold;
+
+    margin:20px 0;
+
+    color:#0f766e;
+
+}
+
+.buy-btn{
+
+    display:inline-block;
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 40px;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    transition:.2s;
+
+}
+
+.buy-btn:hover{
+
+    background:#1d4ed8;
+
+}
