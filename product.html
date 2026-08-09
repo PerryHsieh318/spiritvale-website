@@ -127,6 +127,181 @@
 
     </section>
 
+
+    </section>
+
+
+    <!-- 購買方案 -->
+    <section id="purchase" class="section">
+
+      <div class="container product-content">
+
+        <p class="section-label">
+          PURCHASE
+        </p>
+
+        <h2 class="product-section-title">
+          選擇購買方案
+        </h2>
+
+        <p class="product-intro">
+          請先填寫您與客服聯絡時使用的 LINE 暱稱或識別名稱，
+          方便我們確認付款與後續服務。
+        </p>
+
+        <div
+          style="
+            max-width:520px;
+            margin:30px auto 40px;
+          "
+        >
+          <label
+            for="customer-ref"
+            style="
+              display:block;
+              margin-bottom:10px;
+              font-weight:700;
+            "
+          >
+            LINE 暱稱 / 聯絡識別名稱
+          </label>
+
+          <input
+            id="customer-ref"
+            type="text"
+            maxlength="50"
+            placeholder="例如：阿明、King123"
+            style="
+              width:100%;
+              padding:14px 16px;
+              border:1px solid #cbd5e1;
+              border-radius:10px;
+              font-size:16px;
+              box-sizing:border-box;
+            "
+          >
+        </div>
+
+
+        <article class="product-feature-detail">
+
+          <span class="feature-index">
+            01
+          </span>
+
+          <div>
+            <h3>
+              新會員月卡｜NT$1,600
+            </h3>
+
+            <p>
+              適合首次使用 SV LAB 的玩家。
+              付款成功後系統會自動配發一張全新卡號，
+              可前往 Discord 完成會員驗證。
+            </p>
+
+            <a
+              href="#"
+              class="button primary"
+              onclick="startPayment('NEW_MONTH'); return false;"
+            >
+              立即購買
+            </a>
+          </div>
+
+        </article>
+
+
+        <article class="product-feature-detail">
+
+          <span class="feature-index">
+            02
+          </span>
+
+          <div>
+            <h3>
+              舊會員續約｜NT$1,490
+            </h3>
+
+            <p>
+              適合目前已使用過 SV LAB 的會員。
+              續約將取得一張新的卡號，
+              再依 Discord 驗證流程完成開通。
+            </p>
+
+            <a
+              href="#"
+              class="button secondary"
+              onclick="startPayment('RENEW_MONTH'); return false;"
+            >
+              立即續約
+            </a>
+          </div>
+
+        </article>
+
+
+        <article class="product-feature-detail">
+
+          <span class="feature-index">
+            03
+          </span>
+
+          <div>
+            <h3>
+              虛擬機安裝服務｜NT$800
+            </h3>
+
+            <p>
+              協助安裝與設定虛擬機環境，
+              適合有多開需求但不熟悉虛擬機設定的玩家。
+              此商品為安裝服務，不包含 SV LAB 卡號。
+            </p>
+
+            <a
+              href="#"
+              class="button secondary"
+              onclick="startPayment('VM_SETUP'); return false;"
+            >
+              購買安裝服務
+            </a>
+          </div>
+
+        </article>
+
+
+        <div
+          style="
+            margin-top:32px;
+            padding:18px 22px;
+            background:#fff3cd;
+            border:2px solid #ffca2c;
+            border-radius:12px;
+            color:#664d03;
+            line-height:1.8;
+          "
+        >
+          <strong>
+            ⚠️ ATM 轉帳使用者請注意
+          </strong>
+
+          <br>
+
+          取得 ATM 虛擬帳號後請勿立即關閉付款頁面。
+          完成轉帳後請返回原付款頁並選擇「返回商店」，
+          以取得後續訂單資訊。
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 產品概覽 -->
+    <section id="overview" class="section">
+
+
+
     <!-- 產品概覽 -->
     <section id="overview" class="section">
 
@@ -406,7 +581,35 @@
 
 
 
+<script>
+  function startPayment(productCode) {
+    const input =
+      document.getElementById("customer-ref");
 
+    const customerRef =
+      input.value.trim();
+
+    if (!customerRef) {
+      alert(
+        "請先填寫 LINE 暱稱或聯絡識別名稱"
+      );
+
+      input.focus();
+
+      return;
+    }
+
+    const paymentUrl =
+      "https://svlab.cc/api/payment/create" +
+      "?product=" +
+      encodeURIComponent(productCode) +
+      "&customer_ref=" +
+      encodeURIComponent(customerRef);
+
+    window.location.href =
+      paymentUrl;
+  }
+</script>
 
 
 </body>
