@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
 
@@ -37,7 +39,7 @@
 
   <link
     rel="icon"
-    href="../assets/images/favicon.ico"
+    href="assets/images/favicon.ico"
     sizes="any"
   >
 
@@ -45,17 +47,17 @@
     rel="icon"
     type="image/png"
     sizes="512x512"
-    href="../assets/images/favicon-512.png"
+    href="assets/images/favicon-512.png"
   >
 
   <link
     rel="apple-touch-icon"
-    href="../assets/images/apple-touch-icon.png"
+    href="assets/images/apple-touch-icon.png"
   >
 
   <link
     rel="stylesheet"
-    href="../assets/css/style.css"
+    href="assets/css/style.css"
   >
 </head>
 
@@ -66,7 +68,7 @@
 
     <a href="index.html" class="brand">
       <img
-        src="../assets/images/sv-icon.png"
+        src="assets/images/sv-icon.png"
         alt="SV LAB Logo"
       >
       <span>SV LAB</span>
@@ -103,7 +105,6 @@
   <!-- 更新頁標題 -->
   <section class="update-hero">
 
-
     <div class="container update-hero-content">
 
       <p class="eyebrow">PATCH NOTES</p>
@@ -124,7 +125,366 @@
   <!-- 更新列表 -->
   <section class="section update-list">
 
-    <div class="container update-container">      
+    <div class="container update-container">
+
+
+
+    <!-- =====================================================
+         新版本請插入在此註解下方。
+         規則：僅最新版本使用 LATEST UPDATE + LATEST badge；
+         其餘版本統一使用 PREVIOUS UPDATE。
+    ====================================================== -->
+<!-- 2026.08.11 -->
+<article class="patch-card">
+
+  <!-- 版本標題 -->
+  <header class="patch-header">
+
+    <div>
+      <p class="patch-label">LATEST UPDATE</p>
+
+      <h2>Version 2026.08.11</h2>
+
+      <time datetime="2026-08-11">
+        2026 / 08 / 11
+      </time>
+    </div>
+
+    <span class="latest-badge">LATEST</span>
+
+  </header>
+
+
+  <!-- 更新重點 -->
+  <section class="patch-section patch-summary">
+
+    <h3>✨ 本次更新重點</h3>
+
+    <ul>
+      <li>新增怪群優先目標鎖定模式</li>
+      <li>新增停用普通攻擊選項</li>
+      <li>強化無敵怪物與野外 BOSS No-KS 判定</li>
+      <li>新增玩家密語提醒與調整 GM 警報機制</li>
+      <li>優化遠端倉庫、炸彈卡與編織者技能</li>
+      <li>改善遠程風箏與重新連線穩定性</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 怪群目標 -->
+  <section class="patch-section">
+
+    <h3>🎯 怪群優先目標鎖定</h3>
+
+    <p>
+      新增一種目標鎖定模式，
+      系統可優先針對怪物較密集的區域選擇目標，
+      而不再只以距離最近的怪物為優先。
+    </p>
+
+    <div class="patch-notice">
+      設定位置：03 自動 → 目標優先 → 怪群
+    </div>
+
+  </section>
+
+
+  <!-- 普通攻擊 -->
+  <section class="patch-section">
+
+    <h3>⚔️ 可停用普通攻擊</h3>
+
+    <p>
+      現在可以停用角色的普通攻擊，
+      同時保留技能施放、增益效果、移動及目標鎖定功能。
+    </p>
+
+    <ul>
+      <li>適合不依賴普通攻擊輸出的職業或流派。</li>
+      <li>未啟用普通攻擊時，角色仍會正常使用已設定的技能。</li>
+    </ul>
+
+    <div class="patch-notice">
+      設定位置：04 技能 → 上方「普通攻擊」<br>
+      不開啟普通攻擊即可停用普攻。
+    </div>
+
+  </section>
+
+
+  <!-- 無敵怪物 -->
+  <section class="patch-section">
+
+    <h3>🛡️ 無敵狀態怪物處理優化</h3>
+
+    <p>
+      當目前目標進入無敵狀態時，
+      系統現在會立即釋放該目標，
+      避免角色長時間停留在無法攻擊的怪物上。
+    </p>
+
+    <ul>
+      <li>怪物無敵期間會暫時停止鎖定。</li>
+      <li>無敵狀態結束後，可再次正常成為攻擊目標。</li>
+      <li>不需要等待長時間逾時，也不會永久將怪物加入黑名單。</li>
+    </ul>
+
+    <div class="patch-notice">
+      設定位置：03 自動 → 暫停無敵狀態怪物<br>
+      此功能預設為開啟狀態，建議維持啟用。
+    </div>
+
+  </section>
+
+
+  <!-- BOSS NoKS -->
+  <section class="patch-section">
+
+    <h3>👑 野外 BOSS No-KS 機制</h3>
+
+    <p>
+      新增野外地區 BOSS 的 No-KS 保護功能。
+      當系統偵測到其他玩家或隊伍正在挑戰地圖上的 BOSS 時，
+      可自動切換至其他分流。
+    </p>
+
+    <ul>
+      <li>降低角色持續攻擊其他玩家正在挑戰的 BOSS。</li>
+      <li>避免角色死亡復活後持續重新回到相同 BOSS 的循環。</li>
+      <li>此功能預設為啟用狀態，強烈建議維持開啟。</li>
+    </ul>
+
+    <div class="patch-notice">
+      設定位置：08 隊伍 → 遇他人 BOSS 切換分流<br>
+      <strong>重要：</strong>此功能無法與「固定分流」功能同時使用。
+    </div>
+
+  </section>
+
+
+  <!-- 密語 -->
+  <section class="patch-section">
+
+    <h3>💬 玩家密語提醒</h3>
+
+    <p>
+      收到其他玩家密語時，
+      系統現在會播放提示音並顯示螢幕提醒，
+      方便玩家即時注意並進行回應。
+    </p>
+
+    <ul>
+      <li>收到密語時會發出提示音。</li>
+      <li>螢幕同步顯示提醒。</li>
+      <li>此功能不會自動替玩家回覆訊息。</li>
+    </ul>
+
+    <div class="patch-notice">
+      設定位置：08 隊伍 → 密語提醒
+    </div>
+
+  </section>
+
+
+  <!-- GM -->
+  <section class="patch-section">
+
+    <h3>🚨 GM 警報機制調整</h3>
+
+    <p>
+      調整原有 GM 偵測機制。
+      現在偵測到 GM 或潛在威脅時，
+      遊戲不再立即自動斷線或重新連線。
+    </p>
+
+    <ul>
+      <li>偵測到潛在威脅時會持續播放警告音。</li>
+      <li>威脅消失後，警告音會自動停止。</li>
+      <li>不再因同地圖偵測到 GM 而直接關閉或重新連線。</li>
+    </ul>
+
+    <div class="patch-notice">
+      設定位置：03 自動 → 偵測 GM<br>
+      此功能預設為開啟狀態。
+    </div>
+
+  </section>
+
+
+  <!-- 邀請 -->
+  <section class="patch-section">
+
+    <h3>🚫 自動拒絕組隊與交易邀請</h3>
+
+    <p>
+      自動拒絕組隊及交易邀請功能現在支援自訂延遲時間，
+      讓拒絕行為更加自然。
+    </p>
+
+    <ul>
+      <li>可自行設定收到邀請後的拒絕延遲時間。</li>
+      <li>建議設定約 3～5 秒，避免收到邀請後立即秒拒。</li>
+      <li>若長時間掛機，也可自行建立隊伍以降低受到邀請的情況。</li>
+    </ul>
+
+    <div class="patch-notice">
+      設定位置：08 組隊區塊
+    </div>
+
+  </section>
+
+
+  <!-- 遠端倉庫 -->
+  <section class="patch-section">
+
+    <h3>📦 遠端個人／公會倉庫</h3>
+
+    <p>
+      角色位於地圖上時，
+      現在可直接開啟遊戲官方的個人倉庫或公會倉庫介面。
+    </p>
+
+    <ul>
+      <li>角色必須已完全載入遊戲。</li>
+      <li>開啟倉庫時不可同時進行其他物品欄操作。</li>
+      <li>公會倉庫仍遵循遊戲原有的公會權限與使用限制。</li>
+    </ul>
+
+    <div class="patch-notice">
+      設定位置：05 拾取 → 開啟個人／公會倉庫
+    </div>
+
+  </section>
+
+
+  <!-- 炸彈卡 -->
+  <section class="patch-section">
+
+    <h3>💣 炸彈卡再次優化</h3>
+
+    <p>
+      使用炸彈卡的角色現在會主動搜尋並靠近怪物，
+      不再長時間停留在原地等待敵人攻擊。
+    </p>
+
+    <ul>
+      <li>改善炸彈卡角色的主動尋怪行為。</li>
+      <li>角色會主動靠近可攻擊目標。</li>
+      <li>功能自動生效，無需額外設定。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 編織者 -->
+  <section class="patch-section">
+
+    <h3>🌑 編織者 — 影襲</h3>
+
+    <p>
+      編織者技能「影襲」現在可正常加入常規技能循環，
+      並依照技能設定自動使用。
+    </p>
+
+    <div class="patch-notice">
+      請於「技能」頁面保持「影襲」為啟用狀態，
+      並開啟自動施放。
+    </div>
+
+  </section>
+
+
+  <!-- 遠程 -->
+  <section class="patch-section">
+
+    <h3>🏹 遠程風箏與後撤邏輯優化</h3>
+
+    <p>
+      優化遠程職業戰鬥時的移動、風箏及後撤機制，
+      減少不必要的停頓與反覆微小移動。
+    </p>
+
+    <ul>
+      <li>改善遠程戰鬥時的移動流暢度。</li>
+      <li>減少角色頻繁前後移動造成的停頓。</li>
+      <li>啟用「遠程職業」模式後自動生效。</li>
+    </ul>
+
+    <div class="patch-notice">
+      設定位置：03 自動 → 遠程職業
+    </div>
+
+  </section>
+
+
+  <!-- 重連 -->
+  <section class="patch-section">
+
+    <h3>🔄 重新連接功能優化</h3>
+
+    <p>
+      改善重新連線後的自動登入流程，
+      並修正角色可能停留在伺服器選擇或角色選擇介面的問題。
+    </p>
+
+    <ul>
+      <li>優化重新連線後的自動登入。</li>
+      <li>修正重新連線時可能卡在伺服器選擇介面的問題。</li>
+      <li>修正重新連線時可能卡在角色選擇介面的問題。</li>
+      <li>啟用自動登入與重新連線相關功能後自動生效。</li>
+    </ul>
+
+    <div class="patch-notice">
+      相關設定位置：01 控制<br>
+      建議將自動登入與重新連線相關選項保持開啟。
+    </div>
+
+  </section>
+
+
+  <!-- 重要提醒 -->
+  <section class="patch-section">
+
+    <h3>⚠️ 重要設定提醒</h3>
+
+    <p>
+      修改任何功能設定後，
+      請記得儲存角色配置，
+      避免重新啟動或重新載入後設定未正確套用。
+    </p>
+
+    <div class="patch-notice">
+      設定位置：01 控制 → 儲存設定檔／載入設定檔
+    </div>
+
+  </section>
+
+
+  <!-- 更新提醒 -->
+  <footer class="patch-footer">
+
+    <h3>更新提醒</h3>
+
+    <p>
+      建議所有使用者更新至
+      <strong>2026.08.11</strong>
+      版本，以取得最新的目標判定、
+      No-KS 保護、戰鬥邏輯與重新連線改善。
+    </p>
+
+    <a
+      href="https://line.me/R/ti/p/@174edovb"
+      class="button primary"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      聯絡官方 LINE
+    </a>
+
+  </footer>
+
+</article>
 
 <!-- 2026.08.09 -->
 <article class="patch-card">
@@ -278,11 +638,325 @@
 
 </article>
 
+
+
+
+
+<article class="patch-card">
+
   <!-- 版本標題 -->
   <header class="patch-header">
 
     <div>
-      <p class="patch-label">LATEST UPDATE</p>
+      <p class="patch-label">PREVIOUS UPDATE</p>
+
+      <h2>Version 2026.08.05</h2>
+
+      <time datetime="2026-08-05">
+        2026 / 08 / 05
+      </time>
+    </div>
+
+  </header>
+
+
+  <!-- 更新重點 -->
+  <section class="patch-section patch-summary">
+
+    <h3>✨ 本次更新重點</h3>
+
+    <ul>
+      <li>修復維修後遠程倉庫與自動販賣異常</li>
+      <li>改善白畫面、斷線與重新啟動穩定度</li>
+      <li>新增伺服器維修或連線異常緊急處理機制</li>
+      <li>更新 No-KS（不搶怪）行為邏輯</li>
+      <li>優化槍手 Fan Fire 與整體技能施放順序</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 遠程倉庫與販賣 -->
+  <section class="patch-section">
+
+    <h3>📦 遠程倉庫與販賣修正</h3>
+
+    <p>
+      修復遊戲維修結束後，
+      遠程倉庫與自動販賣功能可能無法正常運作的問題。
+    </p>
+
+    <ul>
+      <li>恢復維修後遠程倉庫功能的正常運作。</li>
+      <li>修復維修後自動販賣功能失效或流程中斷的情況。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 連線與重啟 -->
+  <section class="patch-section">
+
+    <h3>🔄 連線與自動重啟穩定性</h3>
+
+    <p>
+      本次針對遊戲啟動、斷線、維修及重新連線流程進行多項修正，
+      降低角色因伺服器異常而持續卡住的機率。
+    </p>
+
+    <ul>
+      <li>修復自動重啟時白畫面反覆循環並導致當機的問題。</li>
+      <li>新增伺服器維修或伺服器端異常時的緊急處理機制。</li>
+      <li>修復關閉輔助後仍持續進行無限重新連線的問題。</li>
+      <li>修復進入遊戲時發生崩潰、斷線及正常重啟後的多項異常。</li>
+      <li>降低正常關閉或重新啟動後，相關錯誤提示的等待秒數。</li>
+    </ul>
+
+    <div class="patch-notice">
+      進入遊戲、斷線及重新啟動相關修正仍會持續觀察，
+      如遇到異常狀況，請將發生流程提供給官方客服。
+    </div>
+
+  </section>
+
+
+  <!-- 炸彈卡 -->
+  <section class="patch-section">
+
+    <h3>💣 炸彈卡戰鬥修正</h3>
+
+    <ul>
+      <li>
+        修復使用炸彈卡流派時，
+        取消普通攻擊後可能因目標遺失而停止動作的問題。
+      </li>
+      <li>改善目標重新取得與後續戰鬥行為。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- No-KS -->
+  <section class="patch-section">
+
+    <h3>🛡️ No-KS（不搶怪）機制更新</h3>
+
+    <p>
+      更新 No-KS 行為邏輯，
+      使其符合目前遊戲最新的怪物目標判定機制。
+    </p>
+
+    <ul>
+      <li>更新 No-KS（不搶怪）行為以符合最新遊戲機制。</li>
+      <li>當怪物改變攻擊目標時，原有的 No-KS 保護將自動解除。</li>
+      <li>減少錯誤判定造成角色長時間停止攻擊的情況。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 槍手 -->
+  <section class="patch-section">
+
+    <h3>🔫 槍手（Gunslinger）技能優化</h3>
+
+    <p>
+      在 <strong>SKILLS（技能）</strong>
+      設定中新增
+      <strong>Fan Fire</strong>
+      優先權選項。
+    </p>
+
+    <ul>
+      <li>
+        啟用 Fan Fire 優先權後，
+        系統會優先判斷並施放該技能。
+      </li>
+      <li>
+        其他已配置的技能仍會依照設定正常使用，
+        不會因啟用 Fan Fire 優先權而完全停用。
+      </li>
+      <li>優化槍手職業技能設定與戰鬥邏輯判斷。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 技能邏輯 -->
+  <section class="patch-section">
+
+    <h3>⚔️ 技能施放與目標判定優化</h3>
+
+    <ul>
+      <li>減少不正確的技能中斷情況。</li>
+      <li>改善目標鎖定失敗與技能無法正常銜接的問題。</li>
+      <li>優化瞬發技能的偵測邏輯。</li>
+      <li>優化固定狀態的判定方式。</li>
+      <li>調整技能施放順序，提高戰鬥流程穩定度。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 更新提醒 -->
+  <footer class="patch-footer">
+
+    <h3>更新提醒</h3>
+
+    <p>
+      建議所有使用者更新至 <strong>2026.08.05</strong>版本，以取得最新的連線修正、戰鬥優化與系統穩定性改善。
+    </p>
+
+    <a
+      href="https://line.me/R/ti/p/@174edovb"
+      class="button primary"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      聯絡官方 LINE
+    </a>
+
+  </footer>
+
+</article>
+
+
+<!-- 2026.07.30 更新 -->
+<article class="patch-card">
+
+  <!-- 版本標題 -->
+  <header class="patch-header">
+
+    <div>
+      <p class="patch-label">PREVIOUS UPDATE</p>
+
+      <h2>Version 2026.07.30</h2>
+
+      <time datetime="2026-07-30">
+        2026 / 07 / 30
+      </time>
+    </div>
+
+  </header>
+
+  <!-- 更新重點 -->
+  <section class="patch-section patch-summary">
+
+    <h3>✨ 本次更新重點</h3>
+
+    <ul>
+      <li>槍手 Fan Fire（散射）優先施放功能</li>
+      <li>修復重複偵測密鑰造成崩潰</li>
+      <li>提升連線穩定度</li>
+      <li>新增官方 LINE 聯絡資訊</li>
+    </ul>
+
+  </section>
+
+  <!-- 槍手技能 -->
+  <section class="patch-section">
+
+    <h3>🔫 槍手（Gunslinger）技能優化</h3>
+
+    <p>
+      新增 <strong>Prioritize Fan Fire (Gunslinger)</strong>
+      選項，可讓槍手優先施放
+      <strong>Fan Fire（散射）</strong>。
+    </p>
+
+    <div class="patch-notice">
+
+      <strong>設定方式：</strong>
+
+      <ol>
+        <li>開啟腳本主介面（HUD）。</li>
+        <li>切換至 <strong>SKILLS</strong>（技能）頁面。</li>
+        <li>點選已裝備 <strong>Scatter</strong> 的技能欄位。</li>
+        <li>捲動至設定面板最下方。</li>
+        <li>勾選 <strong>Prioritize Fan Fire (Gunslinger)</strong>。</li>
+      </ol>
+
+    </div>
+
+  </section>
+
+  <!-- Bug 修正 -->
+  <section class="patch-section">
+
+    <h3>🛠 Bug 修正</h3>
+
+    <ul>
+      <li>修復重複偵測授權金鑰導致程式崩潰或斷線的問題。</li>
+    </ul>
+
+  </section>
+
+  <!-- 系統優化 -->
+  <section class="patch-section">
+
+    <h3>⚡ 系統穩定性提升</h3>
+
+    <ul>
+      <li>優化整體連線模式。</li>
+      <li>改善高延遲環境下反覆重連的穩定度。</li>
+      <li>降低因網路波動造成重新登入的機率。</li>
+    </ul>
+
+  </section>
+
+  <!-- 官方資訊 -->
+  <section class="patch-section">
+
+    <h3>📢 官方資訊</h3>
+
+    <p>
+      左上角新增
+      <strong>官方 LINE</strong>
+      聯絡入口。
+    </p>
+
+    <div class="patch-notice">
+
+      請透過官方 LINE 聯繫客服，
+      避免購買來源不明或盜版版本，
+      保障您的使用權益與售後服務。
+
+    </div>
+
+  </section>
+
+  <!-- 更新提醒 -->
+  <footer class="patch-footer">
+
+    <h3>更新提醒</h3>
+
+    <p>
+      建議所有使用者更新至
+      <strong>2026.07.30</strong>
+      版本，以取得最佳穩定性與最新功能。
+    </p>
+
+    <a
+      href="https://line.me/R/ti/p/@174edovb"
+      class="button primary"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      聯絡官方 LINE
+    </a>
+
+  </footer>
+
+</article>
+
+<!-- 2026.07.26 更新 -->
+<article class="patch-card">
+
+  <!-- 版本標題 -->
+  <header class="patch-header">
+
+    <div>
+      <p class="patch-label">PREVIOUS UPDATE</p>
 
       <h2>Version 2026.07.26</h2>
 
@@ -291,11 +965,9 @@
       </time>
     </div>
 
-    <span class="latest-badge">LATEST</span>
-
   </header>
 
-
+  
   <!-- 更新重點 -->
   <section class="patch-section patch-summary">
 
