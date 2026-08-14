@@ -134,7 +134,9 @@
          規則：僅最新版本使用 LATEST UPDATE + LATEST badge；
          其餘版本統一使用 PREVIOUS UPDATE。
     ====================================================== -->
-<!-- 2026.08.11 -->
+
+
+<!-- 2026.08.14 -->
 <article class="patch-card">
 
   <!-- 版本標題 -->
@@ -142,6 +144,343 @@
 
     <div>
       <p class="patch-label">LATEST UPDATE</p>
+
+      <h2>Version 2026.08.14</h2>
+
+      <time datetime="2026-08-14">
+        2026 / 08 / 14
+      </time>
+    </div>
+
+    <span class="latest-badge">LATEST</span>
+
+  </header>
+
+
+  <!-- 更新重點 -->
+  <section class="patch-section patch-summary">
+
+    <h3>✨ 本次更新重點</h3>
+
+    <ul>
+      <li>新增私聊自動回覆功能</li>
+      <li>新增 Recovery Mode 多種脫困模式</li>
+      <li>新增玩家自訂移動路線功能</li>
+      <li>新增卡片與寶石安全分解</li>
+      <li>強化多屬性裝備保護規則</li>
+      <li>新增自動離線休息排程功能</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 自動回覆私聊 -->
+  <section class="patch-section">
+
+    <h3>💬 自動回覆私聊</h3>
+
+    <p>
+      新增玩家私聊自動回覆功能。
+      收到其他玩家的私聊訊息後，
+      系統現在可自動產生簡短的英文回覆。
+    </p>
+
+    <ul>
+      <li>所有收到的私聊訊息皆可觸發自動回覆。</li>
+      <li>回覆內容以簡短、自然及隨興的英文句型為主。</li>
+      <li>系統會依照訊息情境變化回覆內容，降低短時間內重複相同回答的情況。</li>
+      <li>若訊息內容提及或詢問機器人相關問題，系統將統一回覆「no」。</li>
+      <li>即使單次回覆發送失敗，也不會影響後續私聊訊息的接收。</li>
+    </ul>
+
+    <div class="patch-notice">
+      設定位置：08 隊伍 → 自動回覆密語<br>
+      此功能系統預設為開啟狀態，建議維持啟用。
+    </div>
+
+  </section>
+
+
+  <!-- Recovery Mode -->
+  <section class="patch-section">
+
+    <h3>🧭 Recovery Mode 脫困系統</h3>
+
+    <p>
+      06 防護區塊新增
+      <strong>Recovery Mode</strong>，
+      用於改善角色卡在牆壁、障礙物或特殊地形時的自動脫困能力。
+    </p>
+
+    <ul>
+      <li><strong>REPATH：</strong>重新計算路徑，並再次嘗試前往目前目標位置。</li>
+      <li><strong>SIDESTEP：</strong>嘗試向角色側方移動，以脫離目前障礙。</li>
+      <li><strong>MOBILITY：</strong>嘗試使用可用的位移或機動技能進行脫困。</li>
+      <li><strong>SMART：</strong>由系統自動判斷目前情況並選擇適合的脫困方式。</li>
+    </ul>
+
+    <p>
+      本次同步改善角色在牆壁、橋樑、坡道及高度差地形上的移動表現。
+      自訂路線系統也會考慮高度資訊，
+      避免誤判並跳過位於不同高度層級的路徑點。
+    </p>
+
+    <div class="patch-notice">
+      設定位置：06 防護 → 右下角 Recovery Mode<br>
+      一般使用建議選擇 <strong>SMART</strong> 模式，
+      若遇到特定地圖或特殊地形，再依實際情況切換其他模式。
+    </div>
+
+  </section>
+
+
+  <!-- 自訂路線 -->
+  <section class="patch-section">
+
+    <h3>🗺️ 自訂路線 Custom Route</h3>
+
+    <p>
+      新增玩家自訂移動路線功能，
+      現在可以直接錄製角色的移動路線，
+      並進行保存及自動重播。
+    </p>
+
+    <ul>
+      <li>支援錄製玩家自行規劃的移動路線。</li>
+      <li>支援路線保存、播放、停止及清除。</li>
+      <li><strong>ONCE：</strong>完整執行一次路線後停止。</li>
+      <li><strong>LOOP：</strong>持續循環執行錄製路線。</li>
+      <li><strong>PINGPONG：</strong>完成路線後反向執行，形成往返移動。</li>
+      <li>介面會顯示目前運行狀態與已錄製的路徑點數量。</li>
+    </ul>
+
+    <div class="patch-notice">
+      設定位置：07 區域 → 最下方 CUSTOM ROUTE<br><br>
+
+      RECORD：開始錄製<br>
+      SAVE：儲存路線<br>
+      PLAY：開始播放<br>
+      STOP：停止執行<br>
+      CLEAR：清除目前路線
+    </div>
+
+    <p>
+      此功能為本次新上線功能，
+      目前仍需要更多不同地圖與使用情境的實際測試。
+      若使用時遇到異常或有改善建議，歡迎回報官方客服。
+    </p>
+
+  </section>
+
+
+  <!-- 遠程模式 -->
+  <section class="patch-section">
+
+    <h3>🏹 遠程模式修復</h3>
+
+    <ul>
+      <li>修正在停用普通攻擊的情況下使用遠程模式可能導致遊戲崩潰的問題。</li>
+      <li>角色現在可以正常靠近目標並使用技能。</li>
+      <li>停用普通攻擊後，不會因遠程模式而重新觸發普通攻擊。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 安全分解 -->
+  <section class="patch-section">
+
+    <h3>♻️ 安全分解功能擴充</h3>
+
+    <p>
+      自動分解功能新增
+      <strong>卡片（Card）</strong>
+      與
+      <strong>寶石（Gem）</strong>
+      類型。
+    </p>
+
+    <ul>
+      <li>僅符合分解條件且未受到保護規則約束的物品會被處理。</li>
+      <li>已收藏物品仍維持保護。</li>
+      <li>已強化物品仍維持保護。</li>
+      <li>新增 Card 卡牌及 Gem 寶石的獨立控制選項。</li>
+    </ul>
+
+    <div class="patch-notice">
+      設定位置：物品清單 → 販售／分類 → 安全分解<br>
+      新增選項：Card 卡牌、Gem 寶石
+    </div>
+
+  </section>
+
+
+  <!-- 多屬性保護 -->
+  <section class="patch-section">
+
+    <h3>🔐 多屬性裝備保護</h3>
+
+    <p>
+      強化裝備屬性保護規則，
+      現在單一規則可以要求同一件裝備同時具有多個指定屬性。
+    </p>
+
+    <ul>
+      <li>同一條規則可設定多個必要屬性。</li>
+      <li>每個指定屬性皆可設定最低數值要求。</li>
+      <li>所有選定條件必須同時符合，物品才會受到該規則保護。</li>
+      <li>改善互相衝突或無法成立的屬性規則設定。</li>
+      <li>當同一件裝備設定發生衝突時，新選擇將覆蓋舊選擇，避免建立無法實現的保護條件。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- BOSS -->
+  <section class="patch-section">
+
+    <h3>👑 BOSS 頻道切換功能優化</h3>
+
+    <p>
+      進一步改善遇到其他玩家或隊伍正在挑戰 BOSS 時的頻道切換判定。
+    </p>
+
+    <ul>
+      <li>優化偵測非隊伍成員所屬 BOSS 時的處理邏輯。</li>
+      <li>屬於玩家本人或目前隊伍成員的 BOSS 將維持正常保護狀態。</li>
+      <li>目前判定狀態及確認切換操作將直接顯示於介面。</li>
+    </ul>
+
+    <div class="patch-notice">
+      設定位置：08 隊伍 → 遇他人 BOSS 換頻分流
+    </div>
+
+  </section>
+
+
+  <!-- 復活 -->
+  <section class="patch-section">
+
+    <h3>💎 復活後自動返回修正</h3>
+
+    <p>
+      改善角色死亡並於城內復活後，
+      自動返回原練功區域的完整流程。
+    </p>
+
+    <ul>
+      <li>角色復活後會正常步行前往水晶位置。</li>
+      <li>只有確認成功使用水晶後，才會進入返回地圖流程。</li>
+      <li>若中途發生斷線，系統會暫停並安全重新嘗試。</li>
+      <li>若地圖切換尚未完成，不會提前執行後續移動操作。</li>
+    </ul>
+
+    <div class="patch-notice">
+      此項修正可降低角色被傳送回城後，
+      遠端誤觸水晶或返回流程異常的情況。
+    </div>
+
+  </section>
+
+
+  <!-- 強制回城 -->
+  <section class="patch-section">
+
+    <h3>🚨 防止異常強制回城</h3>
+
+    <p>
+      新增角色在腳本運行期間異常返回城鎮時的安全保護機制。
+    </p>
+
+    <ul>
+      <li>偵測到角色意外返回城鎮時，所有自動化操作會立即停止。</li>
+      <li>系統會同步觸發視覺及聲音警報。</li>
+      <li>警報持續時間約為 10 秒。</li>
+      <li>即使主 HUD 已隱藏，警告提示仍會正常顯示。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 綜合改善 -->
+  <section class="patch-section">
+
+    <h3>⚙️ 系統與戰鬥穩定性改善</h3>
+
+    <ul>
+      <li>提升私聊自動回覆功能的穩定性。</li>
+      <li>改善技能施放過程中的移動連貫性。</li>
+      <li>改善角色死亡後返回掛機或刷怪區域的處理邏輯。</li>
+      <li>改善地圖切換後重新返回指定區域的流程。</li>
+      <li>優化動作未取得確認時的自動恢復處理。</li>
+      <li>移動及行進相關操作現在會等待角色與地圖完成載入後再執行。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 排程 -->
+  <section class="patch-section">
+
+    <h3>🕒 自動離線休息排程</h3>
+
+    <p>
+      01 控制區塊新增
+      <strong>SCHEDULE</strong>
+      自動離線休息功能，
+      可讓玩家預先設定角色的休息時間。
+    </p>
+
+    <ul>
+      <li>支援最多四組獨立排程時段。</li>
+      <li>介面提供 Window 1、2、3、4 四組時間設定。</li>
+      <li>可依照自己的掛機與休息需求安排不同離線時段。</li>
+    </ul>
+
+    <div class="patch-notice">
+      設定位置：01 控制 → 右下角 SCHEDULE<br><br>
+      目前少部分使用者可能遇到 GMT 時間顯示或判定不準確的情況。
+      建議先實際測試排程時間，如發現時間異常請回報官方。
+    </div>
+
+  </section>
+
+
+  <!-- 更新提醒 -->
+  <footer class="patch-footer">
+
+    <h3>更新提醒</h3>
+
+    <p>
+      建議所有使用者更新至
+      <strong>2026.08.14</strong>
+      版本，以取得最新的自動回覆、
+      Recovery Mode、自訂路線、安全分解、
+      排程功能與系統穩定性改善。
+    </p>
+
+    <a
+      href="https://line.me/R/ti/p/@174edovb"
+      class="button primary"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      聯絡官方 LINE
+    </a>
+
+  </footer>
+
+</article>
+
+
+<!-- 2026.08.11 -->
+<article class="patch-card">
+
+  <!-- 版本標題 -->
+  <header class="patch-header">
+
+    <div>
+      <p class="patch-label">Previous UPDATE</p>
 
       <h2>Version 2026.08.11</h2>
 
