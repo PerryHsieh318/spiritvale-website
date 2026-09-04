@@ -134,8 +134,7 @@
          規則：僅最新版本使用 LATEST UPDATE + LATEST badge；
          其餘版本統一使用 PREVIOUS UPDATE。
     ====================================================== -->
-
-<!-- 2026.08.26 -->
+<!-- 2026.09.03 -->
 <article class="patch-card">
 
   <!-- 版本標題 -->
@@ -144,14 +143,211 @@
     <div>
       <p class="patch-label">LATEST UPDATE</p>
 
+      <h2>Version 2026.09.03</h2>
+
+      <time datetime="2026-09-03">
+        2026 / 09 / 03
+      </time>
+    </div>
+
+    <span class="latest-badge">LATEST</span>
+
+  </header>
+
+
+  <!-- 更新重點 -->
+  <section class="patch-section patch-summary">
+
+    <h3>✨ 本次更新重點</h3>
+
+    <ul>
+      <li>大幅改善自動狩獵效能與 FPS 表現</li>
+      <li>修復並強化自動出售、自動存倉與自動分解功能</li>
+      <li>優化物品拾取範圍、掉落物辨識與物品清單顯示</li>
+      <li>改善無敵／無法擊敗目標的自動切換邏輯</li>
+      <li>強化已升級及強化裝備的出售與分解保護</li>
+      <li>改善 F8 暫停、角色切換及伺服器切換穩定性</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 效能最佳化 -->
+  <section class="patch-section">
+
+    <h3>⚡ 效能與自動狩獵最佳化</h3>
+
+    <p>
+      本次針對長時間自動狩獵時的效能與操作流暢度進行多項最佳化。
+    </p>
+
+    <ul>
+      <li>大幅降低自動狩獵期間的 FPS 損耗。</li>
+      <li>提升戰鬥速度與角色反應靈敏度。</li>
+      <li>優化怪物搜尋與目標判定效率。</li>
+      <li>改善角色移動時的流暢度。</li>
+      <li>優化物品拾取與自動化處理流程。</li>
+      <li>提升整體自動狩獵穩定性。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 自動出售 / 存倉 / 分解 -->
+  <section class="patch-section">
+
+    <h3>📦 自動出售／存倉／分解修復</h3>
+
+    <p>
+      針對近期遊戲版本及不同 Windows 環境造成的物品自動管理異常進行完整修正。
+    </p>
+
+    <ul>
+      <li>修復自動出售功能偶爾無法正常執行的問題。</li>
+      <li>修復「出售物品」按鈕偶爾失效的情況。</li>
+      <li>修復不同作業系統環境造成的自動出售異常。</li>
+      <li>針對 Windows 10、Windows 11 多種版本進行相容性修正與測試。</li>
+      <li>優化自動存倉功能的穩定性。</li>
+      <li>修復並改善自動分解功能。</li>
+      <li>強化及升級過的裝備將持續受到保護，不會遭到自動出售或分解。</li>
+    </ul>
+
+    <div class="patch-notice">
+      目前已透過不同 Windows 版本環境進行測試，自動出售功能可正常運作。<br>
+      若更新後仍遇到無法自動出售的情況，請聯絡官方 LINE，並提供 Windows 版本資訊以協助確認。
+    </div>
+
+  </section>
+
+
+  <!-- 物品拾取 -->
+  <section class="patch-section">
+
+    <h3>🎒 物品拾取與清單優化</h3>
+
+    <p>
+      改善角色拾取地面物品以及背包物品更新時的判定邏輯。
+    </p>
+
+    <ul>
+      <li>優化物品拾取範圍。</li>
+      <li>改善整體拾取目標選擇邏輯。</li>
+      <li>修正角色反覆嘗試拾取已不存在物品的問題。</li>
+      <li>改善物品清單顯示。</li>
+      <li>新獲得的掉落物現在可更穩定地顯示於物品清單。</li>
+    </ul>
+
+    <div class="patch-notice">
+      若地面同時存在大量裝備，角色在執行自動存倉的瞬間仍可能拾取新的物品，
+      因此偶爾可能出現少量物品未於同一次存倉流程中處理的情況。
+    </div>
+
+  </section>
+
+
+  <!-- 無敵目標 -->
+  <section class="patch-section">
+
+    <h3>🎯 無敵與無法擊敗目標處理</h3>
+
+    <p>
+      改善角色面對無敵狀態或長時間無法擊敗目標時的戰鬥判定。
+    </p>
+
+    <ul>
+      <li>當目前怪物無法正常擊敗時，系統會自動放棄並切換目標。</li>
+      <li>改善無敵狀態敵人的判定。</li>
+      <li>避免角色持續停留在無法有效攻擊的目標上。</li>
+      <li>提升重新選擇其他附近怪物時的穩定性。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 裝備保護 -->
+  <section class="patch-section">
+
+    <h3>🛡️ 裝備安全保護</h3>
+
+    <p>
+      持續強化物品自動管理時的重要裝備保護機制。
+    </p>
+
+    <ul>
+      <li>已強化裝備不會被自動出售。</li>
+      <li>已升級裝備不會被自動出售。</li>
+      <li>已強化或升級裝備不會被自動分解。</li>
+      <li>降低高價值裝備因自動管理功能而遭到誤處理的風險。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 系統穩定性 -->
+  <section class="patch-section">
+
+    <h3>🔧 系統穩定性改善</h3>
+
+    <ul>
+      <li>修復 F8 暫停功能的部分偶發性錯誤。</li>
+      <li>改善角色切換時的安全性。</li>
+      <li>改善伺服器切換時的安全性。</li>
+      <li>提升自動出售、自動存倉及自動分解長時間執行時的穩定性。</li>
+    </ul>
+
+  </section>
+
+
+  <!-- 更新提醒 -->
+  <footer class="patch-footer">
+
+    <h3>更新提醒</h3>
+
+    <p>
+      本版本整合
+      <strong>2026.08.31～2026.09.03</strong>
+      的多項修正與最佳化。
+    </p>
+
+    <p>
+      建議所有使用者更新至
+      <strong>2026.09.03</strong>
+      版本，以取得最新的自動出售／存倉／分解修正、
+      效能最佳化、拾取邏輯改善及系統穩定性更新。
+    </p>
+
+    <a
+      href="https://line.me/R/ti/p/@174edovb"
+      class="button primary"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      聯絡官方 LINE
+    </a>
+
+  </footer>
+
+</article>
+
+
+
+
+
+<!-- 2026.08.26 -->
+<article class="patch-card">
+
+  <!-- 版本標題 -->
+  <header class="patch-header">
+
+    <div>
+      <p class="patch-label">PREVIOUS UPDATE</p>
+
       <h2>Version 2026.08.26</h2>
 
       <time datetime="2026-08-26">
         2026 / 08 / 26
       </time>
     </div>
-
-    <span class="latest-badge">LATEST</span>
 
   </header>
 
